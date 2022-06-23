@@ -1,6 +1,8 @@
-# ChallengeAIlabAeroespacial
+# ChallengeAIlabAeroespacial :rocket:
 
-### Server Installation
+## Installation :wrench:
+
+### Server :satellite:
 ```
 pip install virtualenv
 python -m venv venv
@@ -9,7 +11,14 @@ source ./venv/bin/activate	# For Linux
 pip install -r dependencies.txt
 ```
 
-### Server Run
+### Frontend :city_sunrise:
+```
+cd frotend
+npm install
+npm run build
+```
+
+## Run :fireworks: (Doesn't work right now)
 ```
 venv\Scripts\activate		# For Windows
 source ./venv/bin/activate	# For Linux
