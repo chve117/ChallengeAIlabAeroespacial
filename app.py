@@ -11,4 +11,8 @@ api = Api(app)
 def serve(path):
     return send_from_directory(app.static_folder,'index.html')
 
+@app.errorhandler(404)
+def not_found(e):
+    return send_from_directory(app.static_folder,'index.html')
+
 api.add_resource(HelloApiHandler, '/flask/hello')
