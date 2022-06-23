@@ -28,7 +28,7 @@ function App() {
           </button>
         </p>
         <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
+          Exoplanetas
         </p>
         <p>
           <a
