@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import logo from './logo.svg'
+import '../css/styles.css'
 import axios from 'axios'
 import './App.css'
 
@@ -18,43 +18,25 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React + Flask!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-          <div>{getMessage.status === 200 ? 
-          <h3>{getMessage.data.message}</h3>
-          :
-          <h3>LOADING</h3>}</div>
-        </p>
-      </header>
+    <div className='wrapper'>
+      <Card/>
+      <Card/>
+      <Card/>
     </div>
+  )
+}
+
+function Card(){
+  return(
+    <div className="card">
+            <div class="cover__card">
+                <img src="" alt=""/>
+            </div>
+            <hr/>
+            <div class="footer__card">
+                <h3 class="user__name">Mercurio</h3>
+            </div>
+        </div>
   )
 }
 
