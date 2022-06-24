@@ -36,6 +36,9 @@ function Card(){
             <div class="footer__card">
                 <h3 class="user__name">Mercurio</h3>
             </div>
+            <div className='fotter__card'>
+              <p>Distancia:</p>
+            </div>
         </div>
   )
 }
