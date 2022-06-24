@@ -41,21 +41,4 @@ function App() {
   
 }
 
-function Card(){
-  return(
-    <div className="card">
-            <div class="cover__card">
-                <img src="" alt=""/>
-            </div>
-            <hr/>
-            <div class="footer__card">
-                <h3 class="user__name">Mercurio</h3>
-            </div>
-            <div className='fotter__card'>
-              <p>Distancia:</p>
-            </div>
-        </div>
-  )
-}
-
 export default App
