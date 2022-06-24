@@ -45,22 +45,64 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
     --normalText: 'Poppins Light';
     --boldText: 'Poppins Medium';
     --headerText: 'Galano Grotesque Alt Heavy';
+    /* COLORS */
+    --white: #F6F6F6;
+
 }
 
 /* =====================
    * GENERAL STYLES *
 ===================== */
 
+html{
+    height: 100%;
+}
+
 body{
-    /* background-color: var(--background-L0);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-size: 20px;
-    color: var(--white); */
+    color: var(--white);
     font-family: var(--normalText);
+    height: 100%;
+    background: black;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--headerText);
     text-transform: uppercase;
+    margin-top: 0px;
+}
+
+.spaceBG{
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background: #14123D;
+        /* linear-gradient(225deg,#14123D, #2B1D35); */
+}
+
+.spaceBG::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 33%;
+    background: radial-gradient(circle at 2% 96%, #ff9406, rgba(253, 185, 95, 0.11), transparent 68%),
+                radial-gradient(circle at bottom right, rgba(155, 6, 255, 0.89), rgba(253, 95, 200, 0.16), transparent 57%),
+                radial-gradient(circle at top center, #ef06ff, rgba(216, 95, 253, 0.11), transparent 67%),
+                url('./assets/noise.png');
+    ;
+}
+
+.spaceBlur{
+    position: absolute;
+    z-index: 0;
+    backdrop-filter: blur(50px) brightness(-10%);
+    height: 100%;
+    width: 100%;
+    opacity: 3%;
+}
+
+.spaceChildren{
+    position: relative;
+    z-index: 0;
 }
