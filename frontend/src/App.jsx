@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import { AllPlanets, OnePlanet, NotFound} from './pages';
+import '../css/styles.css'
 import axios from 'axios'
 import SpaceBackground from './components/SpaceBackground';
 
@@ -27,7 +28,31 @@ function App() {
         </Routes>
       </BrowserRouter>
     </SpaceBackground>
+    {
+    /* This is on a page
+    <div className='wrapper'>
+      <Card/>
+      <Card/>
+      <Card/>
+    </div>*
+    /
+    }
   )
   
 }
+
+function Card(){
+  return(
+    <div className="card">
+            <div class="cover__card">
+                <img src="" alt=""/>
+            </div>
+            <hr/>
+            <div class="footer__card">
+                <h3 class="user__name">Mercurio</h3>
+            </div>
+        </div>
+  )
+}
+
 export default App
