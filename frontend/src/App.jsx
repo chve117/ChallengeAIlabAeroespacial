@@ -1,29 +1,44 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { AllPlanets, OnePlanet, NotFound} from './pages';
 import '../css/styles.css'
 import axios from 'axios'
-import './App.css'
+import SpaceBackground from './components/SpaceBackground';
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [getMessage, setGetMessage] = useState({})
 
-  useEffect(()=>{
-    axios.get('http://localhost:5000/flask/hello').then(response => {
-      console.log("SUCCESS", response)
-      setGetMessage(response)
-    }).catch(error => {
-      console.log(error)
-    })
-
-  }, [])
+    useEffect(()=>{
+      if(process.env.NODE_ENV!='development'){
+        console.log(process.env.NODE_ENV)
+        axios.get('http://localhost:5000/flask/hello').then(response => {
+          console.log("SUCCESS", response)
+        }).catch(error => {
+          console.log("ERROR",error)
+        })
+      }
+    }, [])
 
   return (
-    <div className='wrapper'>
-      <Card/>
-      <Card/>
-      <Card/>
-    </div>
+    <SpaceBackground>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<AllPlanets/>}/>
+          <Route path='/planet' element={<OnePlanet/>}/>
+          <Route path='*' element={<NotFound/>}/>
+        </Routes>
+      </BrowserRouter>
+      {
+        /* This is on a page
+      <div className='wrapper'>
+        <Card/>
+        <Card/>
+        <Card/>
+      </div>
+      */
+      }
+    </SpaceBackground>
   )
+  
 }
 
 function Card(){
