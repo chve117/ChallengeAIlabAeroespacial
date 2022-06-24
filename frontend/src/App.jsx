@@ -27,16 +27,16 @@ function App() {
           <Route path='*' element={<NotFound/>}/>
         </Routes>
       </BrowserRouter>
+      {
+        /* This is on a page
+      <div className='wrapper'>
+        <Card/>
+        <Card/>
+        <Card/>
+      </div>
+      */
+      }
     </SpaceBackground>
-    {
-    /* This is on a page
-    <div className='wrapper'>
-      <Card/>
-      <Card/>
-      <Card/>
-    </div>*
-    /
-    }
   )
   
 }
