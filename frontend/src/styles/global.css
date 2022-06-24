@@ -47,7 +47,6 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
     --headerText: 'Galano Grotesque Alt Heavy';
     /* COLORS */
     --white: #F6F6F6;
-
 }
 
 /* =====================
@@ -70,6 +69,12 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     margin-top: 0px;
 }
+
+/* =====================
+   * COMPONENTS *
+===================== */
+
+/* * Start of SpaceBackground * */
 
 .spaceBG{
     position: absolute;
@@ -102,6 +107,11 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 3%;
 }
 
+.spaceChildren{
+    position: relative;
+    z-index: 0;
+}
+
 .spaceChildren::before{
     content: '';
     position: fixed;
@@ -125,7 +135,11 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-.spaceChildren{
-    position: relative;
-    z-index: 0;
+
+.pageContainer {
+    margin: 0;
+    overflow-y: auto;
+    height: 100vh;
 }
+
+/* !End of SpaceBackground! */

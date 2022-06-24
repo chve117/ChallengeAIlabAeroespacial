@@ -1,11 +1,13 @@
 
 const SpaceBackground = (props) => {
 
-    return(
+    return (
         <section className="spaceBG">
-            <div className="spaceBlur"/>
+            <div className="spaceBlur" />
             <div className="spaceChildren">
-            { props.children }
+                <div className="pageContainer">
+                    {props.children}
+                </div>
             </div>
         </section>
     );
