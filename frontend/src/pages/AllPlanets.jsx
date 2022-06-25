@@ -5,7 +5,7 @@ const AllPlanets = () => {
     return(
         <div className="container">
             <h1>All Planets</h1>
-            <ToggleSearchButton/>
+            <ToggleSearchButton onSearchEnter={(value)=>{console.log(value)}}/>
             <div className='wrapper'>
               <Card title="Mercurio" distance=" 54 millones" imagen="https://drive.google.com/uc?export=view&id=1Apl3uFSp49AU305oD6J86PS6G5uJFtVk"/>
               <Card title="Venus" distance=" 54 millones" imagen="https://drive.google.com/uc?export=view&id=1ISr5JmuHntNv9-x8yeH-SXAHahx-RLwF"/>
@@ -22,12 +22,12 @@ const AllPlanets = () => {
 function Card(props){
     return(
       <div className="card">
-              <div class="cover__card">
+              <div className="cover__card">
                   <img src={props.imagen}/>
               </div>
               <hr/>
-              <div class="footer__card">
-                  <h3 class="user__name">{props.title}</h3>
+              <div className="footer__card">
+                  <h3 className="user__name">{props.title}</h3>
               </div>
               <div className='fotter__card'>
                 <p>Distancia:{props.distance}</p>
