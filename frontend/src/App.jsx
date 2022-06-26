@@ -23,7 +23,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<AllPlanets/>}/>
-          <Route path='/planet' element={<OnePlanet/>}/>
+          <Route path='/planet/:planet' element={<OnePlanet/>}/>
           <Route path='*' element={<NotFound/>}/>
         </Routes>
       </BrowserRouter>

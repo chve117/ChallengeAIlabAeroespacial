@@ -210,3 +210,54 @@ h1, h2, h3, h4, h5, h6 {
 
 /* !End of ToggleSearchButton! */
 
+
+/* =====================
+       * PAGES *
+===================== */
+
+/* * Start of OnePlanet * */
+
+.onePlanet-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8rem;
+}
+
+.onePlanet-container div {
+    font-size: 1.5rem;
+    padding: 0 5rem;
+}
+
+.onePlanet-container h2 {
+    font-size: 3rem;
+    letter-spacing: 0.4rem;
+}
+
+.more-info {
+    width: 40rem;
+    padding: 1.5rem;
+    overflow-wrap: break-word;
+    box-shadow: inset -11px 0 30px 0 rgba(255, 255, 255, 0.23);
+    border: solid 2px rgba(255, 255, 255, 0.45);
+    border-radius: 40px;
+}
+
+.planet img{
+    width: 28rem;
+    height: 28rem;
+    animation: rotate 40s linear infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.percentage {
+    font-family: var(--headerText);
+    font-size: 8rem;
+    margin: 1rem 0;
+}
