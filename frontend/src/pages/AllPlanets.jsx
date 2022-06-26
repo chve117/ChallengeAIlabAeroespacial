@@ -1,5 +1,5 @@
 import { ToggleSearchButton } from "../components";
-
+import { useNavigate } from "react-router-dom";
 
 const AllPlanets = () => {
     return(
@@ -10,7 +10,7 @@ const AllPlanets = () => {
               <Card title="Mercurio" distance=" 54 millones" imagen="https://drive.google.com/uc?export=view&id=1Apl3uFSp49AU305oD6J86PS6G5uJFtVk"/>
               <Card title="Venus" distance=" 54 millones" imagen="https://drive.google.com/uc?export=view&id=1ISr5JmuHntNv9-x8yeH-SXAHahx-RLwF"/>
               <Card title="Marte" distance=" 54 millones" imagen="https://drive.google.com/uc?export=view&id=1Zlu3gCPBHnRCoqKME6BfUQanPDAijrAh"/>
-              <Card title="Jupiter"distance=" 54 millones" imagen="https://drive.google.com/uc?export=view&id=1WzzUDMNab1vvcw4wfU2Ryy9hSMaarp-h"/>
+              <Card title="Jupiter" distance=" 54 millones" imagen="https://drive.google.com/uc?export=view&id=1WzzUDMNab1vvcw4wfU2Ryy9hSMaarp-h"/>
               <Card title="Saturno" distance=" 54 millones" imagen="https://drive.google.com/uc?export=view&id=1wEuo0Yw-S-QJ-VFwWSeCmsDjQqfU7lg0"/>
               <Card title="Urano" distance=" 54 millones" imagen="https://drive.google.com/uc?export=view&id=1H-3GuCQ7NSrkq5mq59OSzh7WFit2PwwQ"/>
               <Card title="Neptuno" distance=" 54 millones" imagen="https://drive.google.com/uc?export=view&id=1AvqXEFMT751FGbjyP2KDueEX1ES0MZIG"/>
@@ -20,8 +20,11 @@ const AllPlanets = () => {
 }
 
 function Card(props){
+  
+    const navigate = useNavigate();
+
     return(
-      <div className="card">
+      <div className="card" onClick={() => { navigate(`/planet/${props.title}`)}}>
               <div className="cover__card">
                   <img src={props.imagen}/>
               </div>
