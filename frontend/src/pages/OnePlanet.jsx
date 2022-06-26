@@ -22,7 +22,9 @@ const OnePlanet = () => {
             <BackButton />
             <div className="onePlanet-container">
                 <div className="planet">
-                    <Planet3DModel />
+                    <Suspense fallback={null} >
+                        <Planet3DModel nameSolarPlanet={planet} />
+                    </Suspense>
                 </div>
                 <div className="info-planet">
                     <h2>{planet}</h2>
