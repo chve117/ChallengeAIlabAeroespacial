@@ -1,7 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
 import { useParams } from "react-router";
 import { useNavigate } from "react-router-dom";
-import { BackButton } from "../components";
+import { BackButton, Planet3DModel } from "../components";
 
 const OnePlanet = () => {
 
@@ -19,10 +19,10 @@ const OnePlanet = () => {
 
     return (
         <>
-            <BackButton/>
+            <BackButton />
             <div className="onePlanet-container">
                 <div className="planet">
-                    <img src={`/images/planets/${planet}.png`}></img>
+                    <Planet3DModel />
                 </div>
                 <div className="info-planet">
                     <h2>{planet}</h2>
