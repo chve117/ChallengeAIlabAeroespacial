@@ -1,4 +1,40 @@
+from pyexpat import model
 from flask_restful import Api, Resource, reqparse
+from tensorflow import keras
+
+model = keras.models.load_model('habitable_planets.h5')
+
+@app.route("/predict", methods=["GET","POST"])
+
+def predict():
+
+    data = {"success": False}
+
+
+
+    params = flask.request.json
+
+    if (params == None):
+
+        params = flask.request.args
+
+
+
+   
+
+    # if parameters are found, return a prediction
+
+    if (params != None):
+
+        data["prediction"] = str(model.predict([[params[0], params[1], params[2], params[3]]])[0][0])
+
+        data["success"] = True
+
+
+
+    # return a response in json format
+
+    return flask.jsonify(data) 
 
 class HelloApiHandler(Resource):
   def get(self):
