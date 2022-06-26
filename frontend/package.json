@@ -8,10 +8,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-three/drei": "^9.14.3",
+    "@react-three/fiber": "^8.0.27",
     "axios": "^0.27.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-router-dom": "^6.3.0"
+    "react-router-dom": "^6.3.0",
+    "three": "^0.141.0"
   },
   "devDependencies": {
     "@honkhonk/vite-plugin-svgr": "^1.1.0",
